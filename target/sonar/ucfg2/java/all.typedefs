@@ -193,4 +193,8 @@ FstoreToXML(Ljava/io/OutputStream;Ljava/lang/String;Ljava/lang/String;)\java.ut
 :compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)ajava.util.Properties#compute(Ljava/lang/Object;Ljava/util/function/BiFunction;)Ljava/lang/Object;n
 *enumerateStringProperties(Ljava/util/Map;)@java.util.Properties#enumerateStringProperties(Ljava/util/Map;)V&
 size()java.util.Properties#size()IP
-load(Ljava/io/InputStream;)1java.util.Properties#load(Ljava/io/InputStream;)V
+load(Ljava/io/InputStream;)1java.util.Properties#load(Ljava/io/InputStream;)V.
+airportservice.UserServicejava.lang.Object©
+airportservice.UserManagerjava.lang.Objecth
+$<init>(Lairportservice/UserService;)@airportservice.UserManager#<init>(Lairportservice/UserService;)VŽ
+7validateUserLogin(Ljava/lang/String;Ljava/lang/String;)Sairportservice.UserManager#validateUserLogin(Ljava/lang/String;Ljava/lang/String;)Z

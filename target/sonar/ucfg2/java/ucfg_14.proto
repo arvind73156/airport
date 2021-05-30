@@ -1,0 +1,40 @@
+
+Sairportservice.UserManager#validateUserLogin(Ljava/lang/String;Ljava/lang/String;)ZY
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java" "($"1*Õ	
+1Y
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java# #(ì
+ê
+Y
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java# #(%
+%0org.apache.logging.log4j.Logger"__id*
+""Â‚
+Y
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java# #(S
+
+%1void"Korg.apache.logging.log4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V*'
+%
+%0org.apache.logging.log4j.Logger*75
+3Enter inside validateUserLogin() method for user:{}*
+
+usernamejava.lang.String2*info(Ljava/lang/String;Ljava/lang/Object;)∑
+¥
+Y
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java$ $( 
+%2airportservice.UserService"__id*/*-
+airportservice.UserManager"
+userServiceœÃ
+Y
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java$ $(<
+%3boolean"Kairportservice.UserService#userLogin(Ljava/lang/String;Ljava/lang/String;)Z*"
+ 
+%2airportservice.UserService*
+
+usernamejava.lang.String*
+
+passwordjava.lang.String2/userLogin(Ljava/lang/String;Ljava/lang/String;)"c
+Y
+OC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/UserManager.java$ $(=
+"":
+usernamejava.lang.String:
+passwordjava.lang.StringB
+airportservice.UserManager
