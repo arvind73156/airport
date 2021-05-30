@@ -5,6 +5,10 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.util.Properties;
 
+/**
+ * The type Property helper.
+ * @author Arvind
+ */
 public class PropertyHelper {
     private static final Logger logger = LogManager.getLogger(PropertyHelper.class);
 
@@ -21,6 +25,13 @@ public class PropertyHelper {
             logger.error("Exception occurred while parsing properties file:",e.getCause());
         }
     }
+
+    /**
+     * Gets property.
+     *
+     * @param key the key
+     * @return the property
+     */
     public static String getProperty(String key) {
         if (properties.containsKey(key)) {
             return properties.getProperty(key);

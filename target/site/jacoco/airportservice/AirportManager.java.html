@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AirportManager.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">airport</a> &gt; <a href="index.source.html" class="el_package">airportservice</a> &gt; <span class="el_source">AirportManager.java</span></div><h1>AirportManager.java</h1><pre class="source lang-java linenums">package airportservice;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import java.util.List;
+
+
+/**
+ * The type Airport manager.
+ * @author Arvind
+ * @version 1.0
+ */
+public class AirportManager{
+
+<span class="fc" id="L15">    private static final Logger logger = LogManager.getLogger(AirportManager.class);</span>
+
+    /**
+     * The Airport manager service.
+     */
+    AirportManagerService airportManagerService;
+
+    /**
+     * The Airports country service.
+     */
+    AirportsCountryService airportsCountryService;
+
+    /**
+     * The Continents service.
+     */
+    ContinentsService continentsService;
+    /**
+     * The Airport runway service.
+     */
+    AirportRunwayService airportRunwayService;
+
+
+    /**
+     * Instantiates a new Airport manager.
+     *
+     * @param airportManagerService  the airport manager service
+     * @param airportsCountryService the airports country service
+     * @param continentsService      the continents service
+     * @param airportRunwayService   the airport runway service
+     *
+     */
+    public AirportManager(AirportManagerService airportManagerService,
+                          AirportsCountryService airportsCountryService,
+<span class="fc" id="L48">                          ContinentsService continentsService,AirportRunwayService airportRunwayService){</span>
+<span class="fc" id="L49">        this.airportManagerService=airportManagerService;</span>
+<span class="fc" id="L50">        this.airportsCountryService=airportsCountryService;</span>
+<span class="fc" id="L51">        this.continentsService=continentsService;</span>
+<span class="fc" id="L52">        this.airportRunwayService=airportRunwayService;</span>
+<span class="fc" id="L53">    }</span>
+
+
+    /**
+     * List airports list.
+     *
+     * @return the list
+     */
+    public List&lt;String&gt; listAirports(){
+<span class="fc" id="L62">        logger.info(&quot;Enter inside listAirports() method.&quot;);</span>
+
+<span class="fc" id="L64">        return this.airportManagerService.listAirports();</span>
+    }
+
+
+    /**
+     * List airports by name list.
+     *
+     * @param airportName the airport name
+     * @return the list
+     */
+    public List&lt;String&gt; listAirportsByName(String airportName) {
+<span class="fc" id="L75">        logger.info(&quot;Enter inside findAirportsByName() method for airport:{}&quot;,airportName);</span>
+<span class="fc" id="L76">        return this.airportManagerService.listAirportsByName(airportName);</span>
+    }
+
+
+    /**
+     * List airports by country list.
+     *
+     * @param country the country
+     * @return the list
+     */
+    public List&lt;String&gt; listAirportsByCountry(String country) {
+<span class="fc" id="L87">        logger.info(&quot;Enter inside findAirportsByCountry() for country:{}&quot;,country);</span>
+<span class="fc" id="L88">        String countryDetails =this.airportsCountryService.getCountryDetailsByName(country);</span>
+<span class="fc" id="L89">        return this.airportManagerService.listAirportsByCountry(countryDetails);</span>
+    }
+
+
+    /**
+     * List airports by size list.
+     *
+     * @param size the size
+     * @return the list
+     */
+    public List&lt;String&gt; listAirportsBySize(String size) {
+<span class="fc" id="L100">        logger.info(&quot;Enter inside findAirportsBySize() with size:{}&quot;,size);</span>
+
+<span class="fc" id="L102">        return this.airportManagerService.listAirportsBySize(size);</span>
+    }
+
+
+    /**
+     * List airports by runways list.
+     *
+     * @param runway the runway
+     * @return the list
+     */
+    public List&lt;String&gt; listAirportsByRunways(String runway) {
+<span class="fc" id="L113">        logger.info(&quot;Enter inside findAirportsByRunways() for runway:{}&quot;,runway);</span>
+<span class="fc" id="L114">        String runwayCode =this.airportRunwayService.getRunwayCodeByName(runway);</span>
+<span class="fc" id="L115">        return this.airportManagerService.listAirportsByRunways(runwayCode);</span>
+    }
+
+
+    /**
+     * List airports by continents list.
+     *
+     * @param continentName the continent name
+     * @return the list
+     */
+    public List&lt;String&gt; listAirportsByContinents(String continentName) {
+<span class="fc" id="L126">        logger.info(&quot;Enter inside findAirportsByContinents() method for continent:{}&quot;,continentName);</span>
+
+<span class="fc" id="L128">        String continentCode= continentsService.getContinentByName(continentName);</span>
+
+<span class="fc" id="L130">        return this.airportManagerService.listAirportsByContinents(continentCode);</span>
+    }
+
+
+    /**
+     * List all regions list.
+     *
+     * @return the list
+     */
+    public List&lt;String&gt; listAllRegions(){
+
+<span class="fc" id="L141">       return this.airportManagerService.listAllRegions();</span>
+    }
+
+
+    /**
+     * List all countries list.
+     *
+     * @return the list
+     */
+    public List&lt;String&gt; listAllCountries(){
+
+<span class="fc" id="L152">        return this.airportManagerService.listAllCountries();</span>
+    }
+
+
+    /**
+     * List all navaids list.
+     *
+     * @return the list
+     */
+    public List&lt;String&gt; listAllNavaids(){
+
+<span class="fc" id="L163">        return this.airportManagerService.listAllNavaids();</span>
+    }
+
+
+    /**
+     * Get random airport string.
+     *
+     * @return the string
+     */
+    public String getRandomAirport(){
+
+<span class="fc" id="L174">        return this.airportManagerService.getRandomAirport();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
