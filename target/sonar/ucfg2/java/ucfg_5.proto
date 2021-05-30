@@ -1,59 +1,25 @@
 
-Wairportservice.AirportManager#listAirportsByRunways(Ljava/lang/String;)Ljava/util/List;\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javap p(-"1*»
-1\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaq q(ñ
-ì
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaq q(%
-%0org.apache.logging.log4j.Logger"__id*
-""Â‚
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaq q(P
-
-%1void"Korg.apache.logging.log4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V*'
-%
-%0org.apache.logging.log4j.Logger*64
-2Enter inside findAirportsByRunways() for runway:{}*
-
-runwayjava.lang.String2*info(Ljava/lang/String;Ljava/lang/Object;)œ
-Ã
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javar r(4)
-%2#airportservice.AirportRunwayService"__id*;*9
-airportservice.AirportManager"
-airportRunwayServiceÃ…
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javar r(P
-%3java.lang.String"]airportservice.AirportRunwayService#getRunwayCodeByName(Ljava/lang/String;)Ljava/lang/String;*+
-)
-%2#airportservice.AirportRunwayService*
-
-runwayjava.lang.String2'getRunwayCodeByName(Ljava/lang/String;)°
-û
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javar r(Q
-
-runwayCodejava.lang.String"__id*
+6airport.helpers.AirportType#closed()Ljava/lang/String;Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javaQ Q("1*è
+1Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javaR R(ê
+ç
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javaR R(!
+%0airport.helpers.AirportType"__id*
+""Õ 
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javaR R(
+%1java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*#
+!
+%0airport.helpers.AirportType2name()“œ
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javaR R(*
+%2java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
 
-%3java.lang.String—
-Œ
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javas s()*
-%4$airportservice.AirportManagerService"__id*<*:
-airportservice.AirportManager"
-airportManagerService“œ
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javas s(K
-%5java.util.List"^airportservice.AirportManagerService#listAirportsByRunways(Ljava/lang/String;)Ljava/util/List;*,
-*
-%4$airportservice.AirportManagerService* 
-
-
-runwayCodejava.lang.String2)listAirportsByRunways(Ljava/lang/String;)"v
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javas s(L
-
-%5java.util.List:
-runwayjava.lang.StringB!
-airportservice.AirportManager
+%1java.lang.String2toLowerCase()"v
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javaR R(+
+
+%2java.lang.StringB
+airport.helpers.AirportType

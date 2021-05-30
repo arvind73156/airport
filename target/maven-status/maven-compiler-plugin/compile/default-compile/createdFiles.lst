@@ -1,3 +1,4 @@
+airport\helpers\AirportType.class
 airport\helpers\PropertyHelper.class
 airportservice\AirportRunwayService.class
 airportservice\UserService.class
@@ -6,3 +7,4 @@ airportservice\AirportManagerService.class
 airportservice\UserManager.class
 airportservice\AirportsCountryService.class
 airportservice\ContinentsService.class
+airport\helpers\AirportContinent.class

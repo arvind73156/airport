@@ -1,0 +1,38 @@
+
+Tairportservice.AirportManager#listAirportsBySize(Ljava/lang/String;)Ljava/util/List;\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javac c(*"1*ñ	
+1\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javad d(–
+“
+\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javad d(%
+%0org.apache.logging.log4j.Logger"__id*
+""ßÜ
+\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javad d(J
+
+%1void"Korg.apache.logging.log4j.Logger#info(Ljava/lang/String;Ljava/lang/Object;)V*'
+%
+%0org.apache.logging.log4j.Logger*20
+.Enter inside findAirportsBySize() with size:{}*
+
+sizejava.lang.String2*info(Ljava/lang/String;Ljava/lang/Object;)Ñ
+Î
+\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaf f()*
+%2$airportservice.AirportManagerService"__id*<*:
+airportservice.AirportManager"
+airportManagerServiceÆÃ
+\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaf f(B
+%3java.util.List"[airportservice.AirportManagerService#listAirportsBySize(Ljava/lang/String;)Ljava/util/List;*,
+*
+%2$airportservice.AirportManagerService*
+
+sizejava.lang.String2&listAirportsBySize(Ljava/lang/String;)"v
+\
+RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaf f(C
+
+%3java.util.List:
+sizejava.lang.StringB!
+airportservice.AirportManager

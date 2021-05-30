@@ -83,12 +83,12 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
-<td>12</td>
+<td>20</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.982</td></tr></table><br />
+<td>1.339</td></tr></table><br />
 <p>Note: failures are anticipated and checked for with assertions while errors are unanticipated.</p><br /></section><section>
 <h2><a name="Package_List"></a>Package List</h2><a name="Package_List"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><br />
@@ -103,12 +103,12 @@ function toggleDisplay(elementId) {
 <th>Time</th></tr>
 <tr class="b">
 <td><a href="#airport">airport</a></td>
-<td>12</td>
+<td>20</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.982</td></tr></table><br />
+<td>1.339</td></tr></table><br />
 <p>Note: package statistics are not computed recursively, they only sum up all of its testsuites numbers.</p><section>
 <h3><a name="airport"></a>airport</h3><a name="airport"></a>
 <table border="1" class="bodyTable">
@@ -122,6 +122,15 @@ function toggleDisplay(elementId) {
 <th>Success Rate</th>
 <th>Time</th></tr>
 <tr class="b">
+<td><a href="#airport.AirportContinentTest"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
+<td><a href="#airport.AirportContinentTest">AirportContinentTest</a></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0.008</td></tr>
+<tr class="a">
 <td><a href="#airport.AirportManagerTest"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
 <td><a href="#airport.AirportManagerTest">AirportManagerTest</a></td>
 <td>10</td>
@@ -129,7 +138,16 @@ function toggleDisplay(elementId) {
 <td>0</td>
 <td>0</td>
 <td>100%</td>
-<td>1.982</td></tr>
+<td>1.331</td></tr>
+<tr class="b">
+<td><a href="#airport.AirportTypeTest"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
+<td><a href="#airport.AirportTypeTest">AirportTypeTest</a></td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+<td>0</td></tr>
 <tr class="a">
 <td><a href="#airport.PropertyHelperTest"><figure><img src="images/icon_success_sml.gif" alt="" /></figure></a></td>
 <td><a href="#airport.PropertyHelperTest">PropertyHelperTest</a></td>
@@ -150,48 +168,84 @@ function toggleDisplay(elementId) {
 <td>0</td></tr></table></section><br /></section><section>
 <h2><a name="Test_Cases"></a>Test Cases</h2><a name="Test_Cases"></a>
 <p>[<a href="#Summary">Summary</a>] [<a href="#Package_List">Package List</a>] [<a href="#Test_Cases">Test Cases</a>]</p><section>
+<h3><a name="AirportContinentTest"></a>AirportContinentTest</h3><a name="airport.AirportContinentTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportContinentTest.testGetEnumByString"></a>testGetEnumByString</td>
+<td>0.008</td></tr></table></section><section>
 <h3><a name="AirportManagerTest"></a>AirportManagerTest</h3><a name="airport.AirportManagerTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListCountries"></a>testListCountries</td>
-<td>1.619</td></tr>
+<td>0.615</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAirportsByCountry"></a>testListAirportsByCountry</td>
-<td>0.097</td></tr>
+<td>0.245</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAirportsByName"></a>testListAirportsByName</td>
-<td>0.032</td></tr>
+<td>0.116</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAirportsBySize"></a>testListAirportsBySize</td>
-<td>0.049</td></tr>
+<td>0.079</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testGetRandomAirport"></a>testGetRandomAirport</td>
-<td>0.032</td></tr>
+<td>0.053</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAirportsByRunways"></a>testListAirportsByRunways</td>
-<td>0.032</td></tr>
+<td>0.046</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAllRegions"></a>testListAllRegions</td>
-<td>0.024</td></tr>
+<td>0.039</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAllNavaids"></a>testListAllNavaids</td>
-<td>0.024</td></tr>
+<td>0.04</td></tr>
 <tr class="a">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.testListAirports"></a>testListAirports</td>
-<td>0.041</td></tr>
+<td>0.04</td></tr>
 <tr class="b">
 <td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
 <td><a name="TC_airport.AirportManagerTest.findListAirportsByContinents"></a>findListAirportsByContinents</td>
-<td>0.032</td></tr></table></section><section>
+<td>0.058</td></tr></table></section><section>
+<h3><a name="AirportTypeTest"></a>AirportTypeTest</h3><a name="airport.AirportTypeTest"></a>
+<table border="1" class="bodyTable">
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testMediumAirport"></a>testMediumAirport</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testHeliport"></a>testHeliport</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testBaloonPort"></a>testBaloonPort</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testSmallAirport"></a>testSmallAirport</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testClosed"></a>testClosed</td>
+<td>0</td></tr>
+<tr class="b">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testLargeAirport"></a>testLargeAirport</td>
+<td>0</td></tr>
+<tr class="a">
+<td><figure><img src="images/icon_success_sml.gif" alt="" /></figure></td>
+<td><a name="TC_airport.AirportTypeTest.testSeaplaneBase"></a>testSeaplaneBase</td>
+<td>0</td></tr></table></section><section>
 <h3><a name="PropertyHelperTest"></a>PropertyHelperTest</h3><a name="airport.PropertyHelperTest"></a>
 <table border="1" class="bodyTable">
 <tr class="a">

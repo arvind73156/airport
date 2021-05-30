@@ -1,33 +1,25 @@
 
-<airportservice.AirportManager#listAirports()Ljava/util/List;\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java= =($"1*Ú
-1\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java> >(–
-“
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java> >(%
-%0org.apache.logging.log4j.Logger"__id*
-""”‘
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java> >(:
-
-%1void"9org.apache.logging.log4j.Logger#info(Ljava/lang/String;)V*'
-%
-%0org.apache.logging.log4j.Logger*'%
-#Enter inside listAirports() method.2info(Ljava/lang/String;)Ñ
-Î
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java@ @()*
-%2$airportservice.AirportManagerService"__id*<*:
-airportservice.AirportManager"
-airportManagerServiceú÷
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java@ @(8
-%3java.util.List"Cairportservice.AirportManagerService#listAirports()Ljava/util/List;*,
-*
-%2$airportservice.AirportManagerService2listAirports()"v
-\
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.java@ @(9
-
-%3java.util.ListB!
-airportservice.AirportManager
+<airport.helpers.AirportType#smallAirport()Ljava/lang/String;Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.java- -("1*
+1Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.java. .(
+
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.java. .(!
+%0airport.helpers.AirportType"__id*
+""ÍÊ
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.java. .(#
+%1java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*#
+!
+%0airport.helpers.AirportType2name()ÒÏ
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.java. .(1
+%2java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+
+%1java.lang.String2toLowerCase()"v
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.java. .(2
+
+%2java.lang.StringB
+airport.helpers.AirportType

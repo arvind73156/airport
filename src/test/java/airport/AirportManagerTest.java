@@ -82,10 +82,10 @@ public class AirportManagerTest {
         airportsCountryService= Mockito.mock(AirportsCountryService.class);
         continentsService= Mockito.mock(ContinentsService.class);
         airportRunwayService= Mockito.mock(AirportRunwayService.class);
-        lstAirports= Files.lines(Paths.get("C:\\Users\\arv\\Downloads\\airports.csv")).collect(Collectors.toList());
-        lstCountries= Files.lines(Paths.get("C:\\Users\\arv\\Downloads\\countries.csv")).collect(Collectors.toList());
-        lstAllNavaids= Files.lines(Paths.get("C:\\Users\\arv\\Downloads\\navaids.csv")).collect(Collectors.toList());
-        lstAllRegions= Files.lines(Paths.get("C:\\Users\\arv\\Downloads\\regions.csv")).collect(Collectors.toList());
+        lstAirports= Files.lines(Paths.get(TestPropertyLoader.getProperty("airport_csv"))).collect(Collectors.toList());
+        lstCountries= Files.lines(Paths.get(TestPropertyLoader.getProperty("country_csv"))).collect(Collectors.toList());
+        lstAllNavaids= Files.lines(Paths.get(TestPropertyLoader.getProperty("navaids_csv"))).collect(Collectors.toList());
+        lstAllRegions= Files.lines(Paths.get(TestPropertyLoader.getProperty("regions_csv"))).collect(Collectors.toList());
         airportManager =new AirportManager(airportManagerService,airportsCountryService,continentsService,airportRunwayService);
 
 
@@ -110,7 +110,6 @@ public class AirportManagerTest {
     @Test
     public void testListAirports() throws IOException {
 
-        lstAirports= Files.lines(Paths.get("C:\\Users\\arv\\Downloads\\airports.csv")).collect(Collectors.toList());
         Mockito.when(airportManagerService.listAirports()).thenReturn(lstAirports);
         List<String> listAirports =airportManager.listAirports();
         assertNotEquals("Airports list can't be empty/null",0,listAirports.size());
@@ -124,10 +123,11 @@ public class AirportManagerTest {
     @Test
     public void testListAirportsByName(){
         String airportName ="Mys Shmidta Airport";
-        List<String> filteredList=lstAirports.stream().filter(airport->airport.contains(airportName)).
+        List<String> filteredList=lstAirports.stream().
+                filter(airport->airport.contains(TestPropertyLoader.getProperty("airport_name"))).
                 collect(Collectors.toList());
-        Mockito.when(airportManagerService.listAirportsByName(airportName)).thenReturn(filteredList);
-        List<String> listAirports =airportManager.listAirportsByName(airportName);
+        Mockito.when(airportManagerService.listAirportsByName(TestPropertyLoader.getProperty("airport_name"))).thenReturn(filteredList);
+        List<String> listAirports =airportManager.listAirportsByName(TestPropertyLoader.getProperty("airport_name"));
         assertNotEquals("Airport list by name can't be empty",0,listAirports.size());
     }
 
@@ -137,12 +137,13 @@ public class AirportManagerTest {
      */
     @Test
     public void testListAirportsByCountry(){
-        String countryName ="Maldives";
-        String countryCode ="MV";
-        List<String> filteredAirportsList= lstAirports.stream().filter(airport->airport.contains(countryCode)).collect(Collectors.toList());
-        Mockito.when(airportsCountryService.getCountryDetailsByName(countryName)).thenReturn(countryCode);
-        Mockito.when(airportManagerService.listAirportsByCountry(countryCode)).thenReturn(filteredAirportsList);
-        List<String> listResult =airportManager.listAirportsByCountry(countryName);
+
+        List<String> filteredAirportsList= lstAirports.stream().
+                filter(airport->airport.contains(TestPropertyLoader.getProperty("country_code"))).
+                collect(Collectors.toList());
+        Mockito.when(airportsCountryService.getCountryDetailsByName(TestPropertyLoader.getProperty("country_name"))).thenReturn(TestPropertyLoader.getProperty("country_code"));
+        Mockito.when(airportManagerService.listAirportsByCountry(TestPropertyLoader.getProperty("country_code"))).thenReturn(filteredAirportsList);
+        List<String> listResult =airportManager.listAirportsByCountry(TestPropertyLoader.getProperty("country_name"));
         assertNotEquals("Airports by country can't be empty",0, listResult.size());
     }
 
@@ -152,15 +153,14 @@ public class AirportManagerTest {
      */
     @Test
     public void testListAirportsByRunways(){
-    	String runway ="GRAVEL";
-    	String runwayCode ="ZNC";
-    	Mockito.when(airportRunwayService.getRunwayCodeByName(runway)).thenReturn(runwayCode);
+    	Mockito.when(airportRunwayService.getRunwayCodeByName(TestPropertyLoader.getProperty("airport_runway")))
+                .thenReturn(TestPropertyLoader.getProperty("runway_code"));
     	List<String> lstFilteredAirports =lstAirports.stream().
-    			filter(airport->airport.contains(runwayCode)).
+    			filter(airport->airport.contains(TestPropertyLoader.getProperty("runway_code"))).
     			collect(Collectors.toList());
-    	Mockito.when(airportManagerService.listAirportsByRunways(runwayCode)).thenReturn(lstFilteredAirports);
+    	Mockito.when(airportManagerService.listAirportsByRunways(TestPropertyLoader.getProperty("runway_code"))).thenReturn(lstFilteredAirports);
     	
-        List<String> lstResults =airportManager.listAirportsByRunways(runway);
+        List<String> lstResults =airportManager.listAirportsByRunways(TestPropertyLoader.getProperty("airport_runway"));
         assertNotEquals("Airports by runway can't be empty", 0,lstResults.size());
     }
 
@@ -170,10 +170,12 @@ public class AirportManagerTest {
      */
     @Test
     public void testListAirportsBySize(){
-    	String sizeinft ="5068";
-    	List<String> filteredList=lstAirports.stream().filter(airport->airport.contains(sizeinft)).collect(Collectors.toList());
-    	Mockito.when(airportManagerService.listAirportsBySize(sizeinft)).thenReturn(filteredList);
-    	List<String> lstResult =airportManager.listAirportsBySize(sizeinft);
+
+    	List<String> filteredList=lstAirports.stream().
+                filter(airport->airport.contains(TestPropertyLoader.getProperty("airport_sizeinft"))).
+                collect(Collectors.toList());
+    	Mockito.when(airportManagerService.listAirportsBySize(TestPropertyLoader.getProperty("airport_sizeinft"))).thenReturn(filteredList);
+    	List<String> lstResult =airportManager.listAirportsBySize(TestPropertyLoader.getProperty("airport_sizeinft"));
         assertNotEquals("Airports list can't be empty", 0,lstResult.size());
     }
 
@@ -183,12 +185,10 @@ public class AirportManagerTest {
      */
     @Test
     public void findListAirportsByContinents(){
-        String continentCode="AS";
-        String continentName="Asia";
-        Mockito.when(continentsService.getContinentByName(continentName)).thenReturn(continentCode);
-        List<String> filteredAirportList=lstAirports.stream().filter(airport->airport.contains(continentCode)).collect(Collectors.toList());
-        Mockito.when(airportManagerService.listAirportsByContinents(continentCode)).thenReturn(filteredAirportList);
-        List<String> lstResults =airportManager.listAirportsByContinents(continentName);
+        Mockito.when(continentsService.getContinentByName(TestPropertyLoader.getProperty("continent_name"))).thenReturn(TestPropertyLoader.getProperty("continent_code"));
+        List<String> filteredAirportList=lstAirports.stream().filter(airport->airport.contains(TestPropertyLoader.getProperty("continent_code").toString())).collect(Collectors.toList());
+        Mockito.when(airportManagerService.listAirportsByContinents(TestPropertyLoader.getProperty("continent_code"))).thenReturn(filteredAirportList);
+        List<String> lstResults =airportManager.listAirportsByContinents(TestPropertyLoader.getProperty("continent_name"));
         assertNotEquals("Aiports by continent can't be empty",0,lstResults.size());
     }
 

@@ -1,3 +1,6 @@
 airport\PropertyHelperTest.class
+airport\AirportContinentTest.class
+airport\TestPropertyLoader.class
+airport\AirportTypeTest.class
 airport\UserManagerTest.class
 airport\AirportManagerTest.class

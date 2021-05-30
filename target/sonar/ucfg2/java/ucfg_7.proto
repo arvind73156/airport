@@ -1,21 +1,25 @@
 
->airportservice.AirportManager#listAllRegions()Ljava/util/List;^
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaã ã(&"1*∂
-1^
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaç ç(”
-–
-^
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaç ç((*
-%0$airportservice.AirportManagerService"__id*<*:
-airportservice.AirportManager"
-airportManagerServiceÄ˝
-^
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaç ç(9
-%1java.util.List"Eairportservice.AirportManagerService#listAllRegions()Ljava/util/List;*,
-*
-%0$airportservice.AirportManagerService2listAllRegions()"x
-^
-RC:/Users/arv/IdeaProjects/airport/src/main/java/airportservice/AirportManager.javaç ç(:
-
-%1java.util.ListB!
-airportservice.AirportManager
+<airport.helpers.AirportType#seaplaneBase()Ljava/lang/String;Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javac c("1*è
+1Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javad d(ê
+ç
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javad d(!
+%0airport.helpers.AirportType"__id*
+""Õ 
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javad d(#
+%1java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*#
+!
+%0airport.helpers.AirportType2name()“œ
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javad d(1
+%2java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+
+%1java.lang.String2toLowerCase()"v
+Z
+PC:/Users/arv/IdeaProjects/airport/src/main/java/airport/helpers/AirportType.javad d(2
+
+%2java.lang.StringB
+airport.helpers.AirportType
